@@ -4,13 +4,16 @@ window.onload = function(){
         if (!document.getElementById('menu-id').contains(e.target) && (!document.getElementById('navbar-id').contains(e.target))){
             console.log("Clicked outside menu");
             document.getElementById('click').checked=false; //the same code you've used to hide the menu
-        } 
+        }
+        items = document.getElementsByClassName('navigation-item')
+        var arr = Array.prototype.slice.call( items )
+        const matchesNavItem = (element) => element.contains(e.target);
 
-        // if (document.getElementById('technologies-section').contains(e.target)){
-        //     console.log("Clicked technologies-section");
-        //     const scrollingElement = (document.scrollingElement || document.body);
-        //     scrollingElement.scrollTop = scrollingElement.scrollHeight;
-        // } 
+        if (arr.some(matchesNavItem)){
+            console.log("Clicked nav item");
+            document.getElementById('click').checked=false; //the same code you've used to hide the menu
+
+        }
     })
 
     setTimeout(function() {
