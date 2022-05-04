@@ -359,9 +359,17 @@ body {
     
 }
 
+.image-1:hover {
+    z-index:9999
+}
+
 .image-2 {
     transform: translate(-70%, -70%);
     
+}
+
+.image-2:hover {
+    z-index:9999
 }
 
 .image-3 {
@@ -369,8 +377,16 @@ body {
 
 }
 
+.image-3:hover {
+    z-index:9999
+}
+
 .image-4 {
     transform: translate(-30%, -30%);
 
+}
+
+.image-4:hover {
+    z-index:9999
 }
 /* end about me */
